@@ -12,31 +12,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
   <title>Jorge's Instagram Feed</title>
 </head>
 
 <body>
-  <div class="d-flex">
+  <div class="d-flex" style="background-color: rgb(232, 232, 232);">
     <div class="p-2 flex-grow-1"><i class="fa-brands fa-instagram"></i> Instagram</div>
-    <div class="p-1"><!-- Button trigger modal -->
+    <div class="p-1">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Crea un post nuevo
       </button>
 
-      <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Crea un nuevo post</h1>
+
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              <p class="m-1">Caption:</p>
+              <div class="form-floating m-1">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Add you caption, is FREE!</label>
+              </div>
+              <div class="m-1">
+                <button type="button" class="btn btn-light"><i class="fa-solid fa-camera-retro"></i></button>
+                <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary">Publish</button>
             </div>
           </div>
         </div>
@@ -48,48 +57,138 @@
           <i class="fa-solid fa-gear"></i>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
+          <li><a class="dropdown-item" style="color: red;" href="#">Log Out</a></li>
         </ul>
       </div>
     </div>
 
   </div>
-    <ul class="nav justify-content-center nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
-          role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
-          role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-      </li>
+  <ul class="nav justify-content-center nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+        role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-star"></i></button>
+    </li>
 
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col">
-              <img src="https://comedera.com/wp-content/uploads/sites/9/2018/08/pollo-frito.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col">
-              <img src="https://primicias24.s3.us-east-2.amazonaws.com/public/uploads/2024/09/21124127/videoOK.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbTVKiZnXrJrrvH48IYRgQGRNS91ymuTCxw&s" class="img-fluid" alt="...">
-            </div>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <div class="container text-center mw-100 style=" width: 200%;>
+        <div class="row row-cols-3">
+          <div class="col p-0 m-0 overflow-hidden">
+            <img src="https://comedera.com/wp-content/uploads/sites/9/2018/08/pollo-frito.jpg" class="imagenes"
+              alt="...">
           </div>
-        </div>  
-      </div>
-      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...
+          <div class="col p-0 m-0 overflow-hidden">
+            <img src="https://primicias24.s3.us-east-2.amazonaws.com/public/uploads/2024/09/21124127/videoOK.jpg"
+              class="imagenes" alt="...">
+          </div>
+          <div class="col p-0 m-0 overflow-hidden">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbTVKiZnXrJrrvH48IYRgQGRNS91ymuTCxw&s"
+              class="imagenes" alt="...">
+          </div>
+        </div>
+        <div class="row row-cols-3">
+          <div class="col p-0 m-0 overflow-hidden">
+            <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" class="imagenes"
+              alt="...">
+          </div>
+          <div class="col p-0 m-0 overflow-hidden">
+            <img
+              src="https://www.elmundogato.com/wp-content/uploads/2024/06/por-que-los-gatos-tuxedo-son-gordos-70ba11a225.jpg"
+              class="imagenes" alt="...">
+          </div>
+          <div class="col p-0 m-0 overflow-hidden">
+            <img
+              src="https://segurossura.com/content/uploads/sites/10/2021/07/seguros-sura-transporte-beneficios-patineta.jpg"
+              class="imagenes" alt="...">
+          </div>
+        </div>
+        <div class="row row-cols-3">
+          <div class="col p-0 m-0 overflow-hidden">
+            <img src="https://plus.cusica.com/wp-content/uploads/2021/05/turnstile-mystery.jpg" class="imagenes"
+              alt="...">
+          </div>
+          <div class="col p-0 m-0 overflow-hidden">
+            <img
+              src="https://www.kikkoman.es/fileadmin/_processed_/f/0/csm_1103-recipe-page-Spicy-Kimchi-Ramen-with-Pork_desktop_c8dc4e51e8.jpg"
+              class="imagenes" alt="...">
+          </div>
+          <div class="col p-0 m-0 overflow-hidden">
+            <img
+              src="https://render.fineartamerica.com/images/rendered/default/poster/8/5.5/break/images/artworkimages/medium/2/skinny-pete-breaking-bad-joseph-oland.jpg"
+              class="imagenes" alt="miss_white">
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="todas_las_imagenes tab-pane flex-column fade" id="profile-tab-pane" role="tabpanel"
+      aria-labelledby="profile-tab" tabindex="0">
+      <div class="d-flex align-items-center flex-column">
+        <div class="card" style="width: 40rem;">
+          <div class="d-flex justify-content-between align-items-center p-1">
+            <h4>La mejor comida del mundo</h4>
+            <p class="my-2">24/01</p>
+          </div>
+          <img src="https://comedera.com/wp-content/uploads/sites/9/2018/08/pollo-frito.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">8.000.000 Likes</h5>
+            <p class="card-text">Esta foto es solo un ejemplo para el proyecto, pero igual es mi comida favorita</p>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 40rem;">
+          <div class="d-flex justify-content-between align-items-center p-1">
+            <h4> Un juego de video</h4>
+            <p class="my-2">19/08</p>
+          </div>
+          <img src="https://primicias24.s3.us-east-2.amazonaws.com/public/uploads/2024/09/21124127/videoOK.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">4.000 Likes</h5>
+            <p class="card-text">Juegazo, ya no dire más</p>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 40rem;">
+          <div class="d-flex justify-content-between align-items-center p-1">
+            <h4> Quiero ir para alla</h4>
+            <p class="my-2">07/07</p>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbTVKiZnXrJrrvH48IYRgQGRNS91ymuTCxw&s"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">20.000 Likes</h5>
+            <p class="card-text">Imagen referencial de Japon, quiero ir.</p>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 40rem;">
+          <div class="d-flex justify-content-between align-items-center p-1">
+            <h4> Estas son mis mascotas</h4>
+            <p class="my-2">18/07</p>
+          </div>
+          <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">5.000.000</h5>
+            <p class="card-text">Este es un perro beagle, yo tengo 2 jeje</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 

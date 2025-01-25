@@ -1,0 +1,18 @@
+.imagenes {
+    padding: 5px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+.nav-tabs .nav-link.active,
+.nav-tabs,
+.nav-link {
+    background-color: white;
+    border-color: white;
+}
+
+.todas_las_imagenes {
+    padding: 5px;
+}
